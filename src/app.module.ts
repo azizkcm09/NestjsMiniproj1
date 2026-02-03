@@ -4,9 +4,10 @@ import { AppService } from './app.service';
 import { SignalsController } from './signals/signals.controller';
 import { VaultService } from './vault/vault.service';
 import { VaultController } from './vault/vault.controller';
+import { SecurityModule } from './security/security.module';
 
 @Module({
-  imports: [],
+  imports: [SecurityModule],
   controllers: [AppController, SignalsController, VaultController],
   providers: [AppService, VaultService],
 })
